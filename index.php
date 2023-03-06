@@ -1,39 +1,23 @@
-
+<DOCTYOE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <script src="https://kit.fontawesome.com/55db5a83a3.js" crossorigin="anonymous"></script>
-      <style>
-         .btn {
-         background-color:white;
-         color: #060BE5;
-         border-radius:5px;
-         border:solid;
-         }
-      .form-control {
-         background-color:LightBlue;
-         color: #060BE5;
-         border-radius:5px;
-         border:solid;
-         }
-      </style>
-   </head>
-   <body>
+<head><meta name="viewport" content="width=device-width">
+<title>script with encrypt</title>
+
+<style type='text/css'>body{height: auto;width: auto;color: #00FF00;font-family:Bree Serif;text-align:center;padding:10px;margin-top:2%;background-color:#262626;color:#1aefca;letter-spacing:1.5px;}hr{border:0;height:2px;text-align: center;background-image:linear-gradient(to right,rgba(0,0,0,0),rgba(0,255,0,1),rgba(0,0,0,0));}h1{color:#1aefca;}form{margin:2% auto;padding:5px;max-width:580px;text-align:center;}.text{font-size:16px;color:#00FF00;outline:0;border-radius:5px;background-color: #262626;position:relative;font-family:Bree Serif;text-align:center;padding:8px 15px;height:30px;border:solid 1px #00FF00;margin-bottom:15px;box-shadow:10px 10px 20px rgba(0,0,0,0.1);width:90%;}.text:hover{border:solid 1px #FF0000;}.submit{font-size:16px;color:#00FF00;position:relative;background:#262626;outline:0;border-radius:5px;font-family:Bree Serif;text-align:center;padding:8px 15px;height:45px;border:solid 1px #00FF00;margin-bottom:10%;box-shadow:10px 10px 20px rgba(0,0,0,0.1);width:50%;}.submit:hover{background:#262626;color:#FF0000;border:solid 1px #FF0000;}h3{color:#00FF00;padding:5px 0;}strong{color:orange;}marquee{color:#00FF00;font-size: 20px;text-align: center;font-weight:bold;}balance{color:#00FF00;font-size: 20px;text-align: center;font-weight:bold;}gzp{color:#00FF00;font-size: 20px;text-align: center;font-weight:bold;margin-top:10%;}#loader { border: 12px solid #00FF00; border-radius: 50%; border-top: 12px solid #595959; width: 100px; height: 100px;text-align: center;animation: spin 1s linear infinite; } @keyframes spin { 100% { transform: rotate(360deg); } } .center { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }a{text-decoration:none;color:#00FF00;}a:hover{color:#FF0000;}::placeholder { color: #80FF80; font-size:16px;}audio{ display:none;}</style>
+
+</head>
+<body>
      <?php
 error_reporting(0);
-echo "
-<br>        
-<br>           
-<center><h1>Levi | @u_r_r<span></span></h1></center>        
-<br>
-";
+echo "<font color='red' size='5'><bold><hr class='hr-19'>Levi | u_r_r<hr class='hr-19'><bold>";
 
 if(isset($_GET['submit'])){
-	$uidx=$_GET['userid'];
-    $uid=$_GET['target'];
- 
-    
+	$uidx=$_GET['uid'];
+    $uid=$_GET['oid'];
+
+
+
+
   function RandomNumber($length){
     $str="";
     for($i=0;$i<$length;$i++){
@@ -71,7 +55,7 @@ $url1='https://instaup.marsapi.com/get_likes/user/coins';
 
 
 
-$data0='market=Bazaar&user_id='.$uid.'&iad='.$x40.'&user_name='.$name;
+$data0='market:PlayStore&user_id='.$uid.'&iad=de7d6788fcf061b1341cf0661af36fe35ec72647&user_name='.$name;
 
 $a1 = RandomNumber(2);
 $a2 = RandomNumber(2);
@@ -83,21 +67,26 @@ $ipz = $a1.'.'.$a2.'.'.$a3.'.'.$a4;
 $access=md5('45:8D:2E:5C:3A:B4:02:2D:B5:DD:3B:E0:98:4F:14:90:CB:5F:B5:45'.$uid);
 
 
-$headers1=['market: Bazaar',
+$headers1=['Xiaomi:29:M2007J20CI',
 'access: '.$access,
 'lng: en',
+'cnt:in',
+'versionName:17.0.1',
+'version:90',
+'pkg:f2c6d7a5b030a1542f7eb589d5013340',
+'enMarket:EnglishWebPayment',
+'market:PlayStore',
+'uid:'.$uid,
 'api_key: ABCXYZ123TEST',
-"Nagent: null/02:00:00:00:00:00/'.$ts.'/$x16/null/$x40",
-'cnt: unknown',
-'version: 51',
-'pkg: f2c6d7a5b030a1542f7eb589d5013340',
-'aid: '.$x40,
-'Content-Type: application/x-www-form-urlencoded',
-'Host: instaup.marsapi.com',
-'Connection: Keep-Alive',
-'Accept-Encoding: gzip',
-'User-Agent: okhttp/3.12.1',
-'X-Forwarded-For: '.$ipz.''];
+'crc:4653145854/23927768',
+"Nagent:0/02:00:00:00:00:00/48/de2b83032671b409/0/de7d6788fcf061b1341cf0661af36fe35ec72647",
+'dsl:36f9a8e7',
+'aid:de7d6788fcf061b1341cf0661af36fe35ec72647',
+'special-user:1',
+'Host:instaup.marsapi.com',
+'Connection:Keep-Alive',
+'Accept-Encoding:gzip',
+'cookie:  token=47727362511%3AodJFdDrQjISxvB%3A19%3AAYfl_FpgBdtm3Ls1habCNVWgPK2E6loYzNzwxlZotw',];
 
 
 	$ch = curl_init();
@@ -142,12 +131,12 @@ $tkv=md5($enc_data.':M3JGej58KVZIbC13KzVJMA==');
 
 
 
-$dx=urlencode($dx);
 
-
+ 
 $ll='https%3A%5C%2F%5C%2Finstagram.fccu3-1.fna.fbcdn.net%5C%2Fv%5C%2Ft51.2885-15%5C%2Fe35%5C%2Fs150x150%5C%2F264420143_435496831548995_8076441957316773167_n.jpg%3F_nc_ht%3Dinstagram.fccu3-1.fna.fbcdn.net%26_nc_cat%3D111%26_nc_ohc%3DvWrY6qsKOOAAX9ZgJLH%26edm%3DAPU89FABAAAA%26ccb%3D7-4%26oh%3D00_AT_GHVnpr10j1bCs8Dx5unohvTyp_1DgOtu8It7P_Nmpfw%26oe%3D61B616B1%26_nc_sid%3D86f79a';
 
- $data0='gift=0&order_count='.$d2.'&user_id='.$uid.'&tokenV2='.$tkv.'&start_value=1700&media_url=%7B%22media_url%22%3A%22'.$ll.'%22%2C%22user_name%22%3A%22'.$fname.'%22%7D&order_id='.$uidx;
+
+$data0='gift=0&order_count='.$d2.'&user_id='.$uid.'&tokenV2='.$tkv.'&start_value=1700&media_url=%7B%22media_url%22%3A%22'.$ll.'%22%2C%22user_name%22%3A%22'.$fname.'%22%7D&order_id='.$uidx;
 
  $ch = curl_init();
  curl_setopt($ch, CURLOPT_URL,$url0);
@@ -163,56 +152,26 @@ $ll='https%3A%5C%2F%5C%2Finstagram.fccu3-1.fna.fbcdn.net%5C%2Fv%5C%2Ft51.2885-15
     $c=$jsonn['status'];
     if($c == 'Successful'){
 echo "<div class='success'><center>
-<font color='LightBlue><hr>DONE:$d2|<hr></font></center></div>";
+<font color='green'><hr>$output1<hr>
+<font color='red'><hr>DONE : $d2<hr></font></center></div>";
 } else {
 
 echo "<div class='success'><center>
-<font color='LightBlue'><hr>$cc<hr></font></center></div>";
+<font color='green'><hr>$output1<hr></font></center></div>
+<font color='red'><hr>$cc<hr></font></center></div>";
 }
 
 
 	    }
 	
-	if(!isset($_GET['submit']))
-	{
-	?>
-	<section>
-		<div class="container p-5 ">
-			<form action="" method="get">
-				<div class="mb-3">
-					<label class="form-label">Target Insta ID </label>
-					<input type='text' name='target' class="form-control" required>
-					<div  class="form-text">Target Insta ID</div>
-					
-				</div>
-				<div class="mb-3">
-					<label class="form-label">ID</label>
-					<input type='text' name='userid' class="form-control" required>
-					<div  class="form-text">Your Insta ID</div>
-					
-				
-					
-				</div>
-				<button type="submit" name='submit' value='submit' class="btn btn-primary">Submit</button>
-				
-			</form>
-			
-		</div>
-		
-	</section>
-	<?php
+	if(!isset($_GET['submit'])){
+echo"<form action='' method='get'>
+<input type='text' name='oid'  class='text' placeholder='The ID Target' required><br><br>
+<input type='text' name='uid'  class='text' placeholder='Your ID' required><br><br>";
+echo "<input type='submit' class='submit' name='submit' value='Done'>";
 	}
-	?>
-	<section>
-		<div class="container p-2 text-center">
-			<button onclick="location.href='http://t.me/u_r_r'" class="btn btn-primary rounded-circle icon-btn"><i class="fa fa-telegram"></i></button>
-			<p class="text-muted p-5">copyright Levi | u_r_r</p>
-			
-		</div>
-		
-	</section>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	
-  </Lev Levi | u_r_r>
-  
-</html>
+
+?>
+      <script type="text/javascript"> var arrgetbtn=[]; arrgetbtn.push({"title":"Instagram","icon":"fwidgethelp-telegram_v2","link":"https://t.me/u_r_r","target":"_blank","color":"#FFFFFF","background":"#27A5E7"}); arrgetbtn.push({"title":"","icon":"fwidgethelp-telegram_v2","link":"https://t.me/u_r_r","target":"_blank","color":"#FFFFFF","background":"#cc0000"}); arrgetbtn.push({"title":"","icon":"fwidgethelp-envelope","link":"","target":"_blank","color":"#FFFFFF","background":"#ff9900"}); var WidGetButtonOptions = { id:"99d94b6d33562f7f07911780e8c72119", iconopen:"fwidgethelp-telegram_v2", maintitle:"Telegram", mainbackground:"#ff0000", maincolor:"hsv(0, 0%, 100%)", pulse:"widgethelp_pulse", fasize:"1.75", direction:"top", position:"rightbottom", arrbtn: arrgetbtn }; (function() { var script = document.createElement("script"); script.type = "text/javascript"; script.async = true; script.src = "https://getbtn.com/widget/index.php?id="+WidGetButtonOptions.id; document.getElementsByTagName("head")[0].appendChild(script); })();</script>
+
+
