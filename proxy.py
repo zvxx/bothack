@@ -1,66 +1,80 @@
-import requests,urllib,threading,os
-from threading import active_count
-os.system('pip install requests')
-os.system('pip install urllib') 
-os.system('pip install threading') 
-n_threads = 100  
-threads = []
-def scrap():
-    try:
-        https = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=https&timeout=0", proxies=urllib.request.getproxies(), timeout=5).text
-        http = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=0", proxies=urllib.request.getproxies(), timeout=5).text
-        socks = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5&timeout=0", proxies=urllib.request.getproxies(), timeout=5).text
-    except Exception as e:
-        print(e)
-        return False
-    f = open("proxies.txt", "w")
-    f.write(https+"\n"+http)
-    f.close()
-    f = open("socks.txt", "w")
-    f.write(socks)
-    f.close()
-def checker(proxy):
-    proxies = {
-        'http': proxy,
-        'https': proxy,}
-    try:
-        view2(proxy)
-    except Exception as e:
-        return False
-def start():
-    s = scrap()
-    if s == False:
-        return
-    list = open('proxies.txt', 'r')
-    proxies = list.readlines()
-    list.close()
-    for i in proxies:
-        p = i.split('\n')[0]
-        if not p:
-            continue
-        while active_count() > n_threads:
-            liiii=9
-        thread = threading.Thread(target=checker, args=(p,))
-        threads.append(thread)
-        thread.start()
-    list = open('socks.txt', 'r')
-    proxies = list.readlines()
-    list.close()
-    for i in proxies:
-        p = i.split('\n')[0]
-        if not p:
-            continue
-        while active_count() > n_threads:
-          lii7ii=99
-        pr = "socks5://"+p
-        thread = threading.Thread(target=checker, args=(pr,))
-        threads.append(thread)
-        thread.start()
-    return True
-def process(run_for_ever:bool = False):
-    if run_for_ever:
-        while True:
-            start()
-    else:
-        start()
-process(True)
+<?php
+$n_threads = 100;
+$threads = [];
+
+function scrap() {
+    try {
+        $https = file_get_contents("https://api.proxyscrape.com/?request=displayproxies&proxytype=https&timeout=0");
+        $http = file_get_contents("https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=0");
+        $socks = file_get_contents("https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5&timeout=0");
+    } catch (Exception $e) {
+        echo $e;
+        return false;
+    }
+    $f = fopen("proxies.txt", "w");
+    fwrite($f, $https."\n".$http);
+    fclose($f);
+    $f = fopen("socks.txt", "w");
+    fwrite($f, $socks);
+    fclose($f);
+}
+
+function checker($proxy) {
+    $proxies = [
+        'http' => $proxy,
+        'https' => $proxy
+    ];
+    try {
+        // replace the view2 function with the actual code for checking the proxy
+        view2($proxy);
+    } catch (Exception $e) {
+        return false;
+    }
+}
+
+function start() {
+    $s = scrap();
+    if ($s === false) {
+        return;
+    }
+    $list = file("proxies.txt");
+    foreach ($list as $i) {
+        $p = trim($i);
+        if (empty($p)) {
+            continue;
+        }
+        while (count($threads) > $n_threads) {
+            usleep(1000);
+        }
+        $thread = new Thread("checker", $p);
+        $threads[] = $thread;
+        $thread->start();
+    }
+    $list = file("socks.txt");
+    foreach ($list as $i) {
+        $p = trim($i);
+        if (empty($p)) {
+            continue;
+        }
+        while (count($threads) > $n_threads) {
+            usleep(1000);
+        }
+        $pr = "socks5://".$p;
+        $thread = new Thread("checker", $pr);
+        $threads[] = $thread;
+        $thread->start();
+    }
+    return true;
+}
+
+function process($run_for_ever = false) {
+    if ($run_for_ever) {
+        while (true) {
+            start();
+        }
+    } else {
+        start();
+    }
+}
+
+process(true);
