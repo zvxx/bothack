@@ -1,1 +1,1 @@
-worker: php index.php
+worker: python3 proxy.py
