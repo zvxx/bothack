@@ -1,1 +1,1 @@
-worker: php bot.php
+worker: Php bot.php
