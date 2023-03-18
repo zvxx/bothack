@@ -1,1 +1,1 @@
-worker: python3 proxy.py
+worker: php bot.php
