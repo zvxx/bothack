@@ -1,9 +1,4 @@
 <?php
-/*
- ■□■□■□■□■□■□■□■□■
-BY : @u_r_r                                            □
- ■□■□■□■□■□■□■□■□■
-*/
 ob_start();
 $API_KEY = "5738204033:AAH9mcP6Sw2JOORSmc1bo6UsTvonAbBc1N4";
 define('API_KEY',$API_KEY);
@@ -213,8 +208,3 @@ bot('SendMessage',[
 ]);
 }
 }
-/*
- ■□■□■□■□■□■□■□■□■
-BY : @u_r_r                                            □
- ■□■□■□■□■□■□■□■□■
-*/
