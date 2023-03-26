@@ -88,6 +88,6 @@ def instaa(message):
    print(u)
    bot.reply_to(message,text=u)    
  except:
-  bot.reply_to(message,text="عذرا لم اجد كهاذا زر!!")
+  pass
    
 bot.polling()
