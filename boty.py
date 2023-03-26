@@ -1,7 +1,7 @@
 import telebot,requests
 from telebot import types
 
-Token=input("6088451625:AAFe9I3gHfuui_dzAx0a4SGKKtom92P2DeU")
+Token= "6088451625:AAFe9I3gHfuui_dzAx0a4SGKKtom92P2DeU"
 bot=telebot.TeleBot(Token)
 telebot.logger.setLevel(__import__('logging').DEBUG)
 @bot.message_handler(commands=["start"])
