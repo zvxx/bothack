@@ -3,7 +3,7 @@ from telebot import types
 
 Token=input("6088451625:AAFe9I3gHfuui_dzAx0a4SGKKtom92P2DeU")
 bot=telebot.TeleBot(Token)
-telebot.logger.setLevel(import('logging').DEBUG)
+telebot.logger.setLevel(__import__('logging').DEBUG)
 @bot.message_handler(commands=["start"])
 def Aa(message):
  id=message.chat.id
