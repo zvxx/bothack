@@ -1,13 +1,5 @@
-import os
-try:
-	import telebot,requests
-	from telebot import types
-except:
-	os.system('pip install telebot')
-	os.system('pip install pyTelegramBotApi')
-	os.system('pip install requests')
-	import telebot,requests
-	from telebot import types
+import telebot,requests
+from telebot import types
 
 Token=input("6088451625:AAFe9I3gHfuui_dzAx0a4SGKKtom92P2DeU")
 bot=telebot.TeleBot(Token)
