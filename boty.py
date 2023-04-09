@@ -4,6 +4,27 @@ import json
 import requests
 import time
 from telebot import types
+from telebot.types import Message
+from StringSessionBot.database import SESSION
+from StringSessionBot.database.users_sql import Users, num_users
+
+@bot.message_handler(func=lambda msg: True, content_types=["text"])
+def users_sql(msg: Message):
+    if msg.from_user:
+        q = SESSION.query(Users).get(int(msg.from_user.id))
+        if not q:
+            SESSION.add(Users(msg.from_user.id))
+            SESSION.commit()
+        else:
+            SESSION.close()
+
+
+@bot.message_handler(commands=['stats'])
+def _stats(msg: Message):
+    users = num_users()
+    bot.reply_to(msg, f"Total Users : {users}")
+
+
 
 url = 'https://us-central1-chat-for-chatgpt.cloudfunctions.net/basicUserRequestBeta'
 
