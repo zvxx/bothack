@@ -7,7 +7,7 @@ from telebot import types
 
 url = 'https://us-central1-chat-for-chatgpt.cloudfunctions.net/basicUserRequestBeta'
 
-bot = telebot.TeleBot('5910420597:AAEUs5MPt3HdAbkDKti-OIdti0yFCQhVRnc')
+bot = telebot.TeleBot('6013707265:AAEVh6Sd4YR_L57fQpK5Lqgy_5HOeyM3YZI')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
