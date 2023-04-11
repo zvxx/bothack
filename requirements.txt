@@ -1,7 +1,5 @@
 APScheduler==3.6.3
 
-html
-
 bs4
 
 instaloader
