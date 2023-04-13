@@ -139,7 +139,7 @@ def handle_all_messages(message):
 def Lev_group(message):
     prompt = message.text.replace('/Levi', '', 1)
     if not prompt:
-        bot.reply_to(message, "- Please include your prompt after the /Levi command .\n\n- الـࢪجـاء وضـع طـلب بـعد امـࢪ /Levi .")
+        pass
         return
     try:
         code = gpt(prompt)
