@@ -1,5 +1,5 @@
 
-  "name": "MyTelegramOrgRoBot",
+  "name": "Levi",
   "description": "get your APP ID and API HASH inside Telegram",
   "keywords": [
     "telegram",
@@ -8,7 +8,7 @@
     "scrapper",
     "3"
   ],
-  "repository": "https://github.com/mrismanaziz/Scrap-Man",
+  "repository": "https://github.com/zvxx/bothack",
   "env": {
     "Levi": {
       "description": "Levi Your Uncle",
@@ -21,5 +21,4 @@
       "size": "eco"
     }
   },
-  "stack": "heroku-22"
-}
+  "stack": "heroku-22" 
