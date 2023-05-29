@@ -23,19 +23,10 @@
   "repository": "https://github.com/zvxx/bothack",
 
   "env": {
-    "meo": {
-
-      "description": "levi your Uncle",
-
-      "required": false
-
-    },
-
-    "lsjs": {
-
+    "BOT_TOKEN": {
       "description": "Levi Your Uncle",
-
-      "required": false
+      "required": true,
+      "value": "" 
 
     }
 
