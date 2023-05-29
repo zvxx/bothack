@@ -1,34 +1,25 @@
-{
 
-  "name": "Levi",
-
+  "name": "MyTelegramOrgRoBot",
   "description": "get your APP ID and API HASH inside Telegram",
-
   "keywords": [
-
     "telegram",
-
     "best",
-
     "app",
-
     "scrapper",
-
     "3"
-
   ],
-
-  "repository": "https://github.com/zvxx/bothack"
-    "formation": {
-
-    "web": {
-
-      "quantity": 1,
-
-      "size": "eco"
-
+  "repository": "https://github.com/mrismanaziz/Scrap-Man",
+  "env": {
+    "Levi": {
+      "description": "Levi Your Uncle",
+      "required": false
     }
-
   },
-
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
   "stack": "heroku-22"
+}
