@@ -1,24 +1,58 @@
+{
 
   "name": "Levi",
-  "description": "get your APP ID and API HASH inside Telegram",
+
+  "description": "meo",
+
   "keywords": [
+
     "telegram",
+    
+    "bot", 
+
     "best",
+
     "app",
+
     "scrapper",
+
     "3"
+
   ],
+
   "repository": "https://github.com/zvxx/bothack",
+
   "env": {
-    "Levi": {
-      "description": "Levi Your Uncle",
+    "meo": {
+
+      "description": "levi your Uncle",
+
       "required": false
+
+    },
+
+    "lsjs": {
+
+      "description": "Levi Your Uncle",
+
+      "required": false
+
     }
+
   },
+
   "formation": {
+
     "web": {
+
       "quantity": 1,
+
       "size": "eco"
+
     }
+
   },
-  "stack": "heroku-22" 
+
+  "stack": "heroku-22"
+
+}
